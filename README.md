@@ -21,3 +21,8 @@ To deploy the workflow, follow these steps:
 Once installed, users can execute the workflow with the link provided as above, and will then be added to the specified channels.
 
 ![Workflow preview](./.github/img/workflow.png)
+
+## Limitations
+
+- The app must be added to the channel that users trigger the workflow from, otherwise executions will fail
+- The user installing the app via `slack deploy` must be present in the target channel(s), and have invite permissions
