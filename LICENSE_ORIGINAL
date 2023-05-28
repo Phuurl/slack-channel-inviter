@@ -1,6 +1,11 @@
-MIT License
+This project used https://github.com/slack-samples/deno-starter-template as a starting point. 
+The original license from there is included below.
 
-Copyright (c) 2023 Phil Corbett
+---
+
+The MIT License (MIT)
+
+Copyright (c) 2022- Slack Technologies, LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

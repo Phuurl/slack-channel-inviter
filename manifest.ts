@@ -1,24 +1,16 @@
 import { Manifest } from "deno-slack-sdk/mod.ts";
-import SampleWorkflow from "./workflows/sample_workflow.ts";
-import SampleObjectDatastore from "./datastores/sample_datastore.ts";
+import { ChannelInviteWorkflow } from "./workflows/invite.ts";
 
-/**
- * The app manifest contains the app's configuration. This
- * file defines attributes like app name and description.
- * https://api.slack.com/automation/manifest
- */
 export default Manifest({
-  name: "alissa-starter-template",
-  description: "A template for building Slack apps with Deno",
-  icon: "assets/default_new_app_icon.png",
-  workflows: [SampleWorkflow],
+  name: "Channel Inviter",
+  description: "Workflow to automatically add users to channels",
+  icon: "assets/icon.png",
+  functions: [],
+  workflows: [ChannelInviteWorkflow],
   outgoingDomains: [],
-  datastores: [SampleObjectDatastore],
   botScopes: [
-    "commands",
-    "chat:write",
-    "chat:write.public",
-    "datastore:read",
-    "datastore:write",
+    // Required scopes as per https://api.slack.com/reference/functions/invite_user_to_channel
+    "channels:manage",
+    "groups:write",
   ],
 });
